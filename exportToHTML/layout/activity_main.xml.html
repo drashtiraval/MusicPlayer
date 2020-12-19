@@ -1,0 +1,287 @@
+<html>
+<head>
+<title>activity_main.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #bababa;}
+.s2 { color: #6a8759;}
+.s3 { color: #a9b7c6;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+activity_main.xml</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s2">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s2">=&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s0">&lt;androidx.constraintlayout.widget.ConstraintLayout </span><span class="s1">xmlns:android</span><span class="s2">=&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="s1">xmlns:app</span><span class="s2">=&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+    <span class="s1">xmlns:tools</span><span class="s2">=&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:layout_height</span><span class="s2">=&quot;match_parent&quot;</span>
+    <span class="s1">android:background</span><span class="s2">=&quot;@color/colorBackground&quot;</span>
+    <span class="s1">tools:context</span><span class="s2">=&quot;.MainActivity&quot;</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;View</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/viewSupporterForBackground&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;1dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;1dp&quot;</span>
+        <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;30dp&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;@id/layout_player&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;@id/layout_player&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;@id/layout_player&quot;</span>
+        <span class="s0">/&gt;</span>
+    <span class="s0">&lt;View</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/viewSupporterForAlbumArt&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;1dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;1dp&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toTopOf</span><span class="s2">=&quot;@id/layout_player&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;View</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/view1&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;0dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;0dp&quot;</span>
+        <span class="s1">android:background</span><span class="s2">=&quot;@color/colorHint&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toTopOf</span><span class="s2">=&quot;@id/viewSupporterForAlbumArt&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toStartOf</span><span class="s2">=&quot;@id/viewSupporterForAlbumArt&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;View</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/view2&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;0dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;0dp&quot;</span>
+        <span class="s1">android:background</span><span class="s2">=&quot;@color/colorHint&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;@id/viewSupporterForBackground&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintStart_toEndOf</span><span class="s2">=&quot;@id/view1&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf</span><span class="s2">=&quot;@id/view1&quot;</span>
+        <span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;com.makeramen.roundedimageview.RoundedImageView</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/music_image&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;200dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;260dp&quot;</span>
+        <span class="s1">android:scaleType</span><span class="s2">=&quot;centerCrop&quot;</span>
+        <span class="s1">android:src</span><span class="s2">=&quot;@drawable/music&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;@id/viewSupporterForAlbumArt&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;@id/viewSupporterForAlbumArt&quot;</span>
+        <span class="s1">app:riv_corner_radius</span><span class="s2">=&quot;12dp&quot;</span>
+        <span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;TextView</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/title_text&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;20dp&quot;</span>
+        <span class="s1">android:gravity</span><span class="s2">=&quot;center&quot;</span>
+        <span class="s1">android:text</span><span class="s2">=&quot;@string/current_song_title&quot;</span>
+        <span class="s1">android:textColor</span><span class="s2">=&quot;@color/colorPrimaryText&quot;</span>
+        <span class="s1">android:textSize</span><span class="s2">=&quot;22sp&quot;</span>
+        <span class="s1">android:textStyle</span><span class="s2">=&quot;bold&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf</span><span class="s2">=&quot;@id/music_image&quot;</span>
+        <span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;TextView</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/artist_text&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+        <span class="s1">android:gravity</span><span class="s2">=&quot;center&quot;</span>
+        <span class="s1">android:text</span><span class="s2">=&quot;@string/artist_name&quot;</span>
+        <span class="s1">android:textColor</span><span class="s2">=&quot;@color/colorSecondaryText&quot;</span>
+        <span class="s1">android:textSize</span><span class="s2">=&quot;18sp&quot;</span>
+        <span class="s1">app:layout_constraintTop_toBottomOf</span><span class="s2">=&quot;@id/title_text&quot;</span>
+        <span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;TextView</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/nowplaying&quot;</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+        <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;30dp&quot;</span>
+        <span class="s1">android:text</span><span class="s2">=&quot;@string/now_playing&quot;</span>
+        <span class="s1">android:textAllCaps</span><span class="s2">=&quot;true&quot;</span>
+        <span class="s1">android:textColor</span><span class="s2">=&quot;@color/colorPrimaryText&quot;</span>
+        <span class="s1">android:textSize</span><span class="s2">=&quot;18sp&quot;</span>
+        <span class="s1">android:textStyle</span><span class="s2">=&quot;bold&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;ImageView</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;30dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;30dp&quot;</span>
+        <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;20dp&quot;</span>
+        <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/app_name&quot;</span>
+        <span class="s1">android:rotation</span><span class="s2">=&quot;-90&quot;</span>
+        <span class="s1">android:src</span><span class="s2">=&quot;@drawable/ic_up&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;@id/nowplaying&quot;</span>
+        <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;@id/nowplaying&quot;</span>
+        <span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;ImageView</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;30dp&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;30dp&quot;</span>
+        <span class="s1">android:layout_marginEnd</span><span class="s2">=&quot;20dp&quot;</span>
+        <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/app_name&quot;</span>
+        <span class="s1">android:src</span><span class="s2">=&quot;@drawable/ic_more&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;@id/nowplaying&quot;</span>
+        <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;@id/nowplaying&quot;</span>
+        <span class="s0">/&gt;</span>
+    <span class="s0">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+        <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+        <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+        <span class="s1">android:id</span><span class="s2">=&quot;@+id/layout_player&quot;</span>
+        <span class="s1">android:background</span><span class="s2">=&quot;@drawable/player_background&quot;</span>
+        <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;parent&quot;</span>
+        <span class="s0">&gt;</span>
+
+        <span class="s0">&lt;TextView</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/text_Lyrics&quot;</span>
+            <span class="s1">android:layout_marginBottom</span><span class="s2">=&quot;15dp&quot;</span>
+            <span class="s1">android:gravity</span><span class="s2">=&quot;center&quot;</span>
+            <span class="s1">android:text</span><span class="s2">=&quot;@string/lyrics&quot;</span>
+            <span class="s1">android:textAllCaps</span><span class="s2">=&quot;true&quot;</span>
+            <span class="s1">android:textColor</span><span class="s2">=&quot;@color/colorPrimaryText&quot;</span>
+            <span class="s1">android:textSize</span><span class="s2">=&quot;15sp&quot;</span>
+            <span class="s1">android:textStyle</span><span class="s2">=&quot;bold&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;ImageView</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;25dp&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;25dp&quot;</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/image_Lyrics&quot;</span>
+            <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/app_name&quot;</span>
+            <span class="s1">android:src</span><span class="s2">=&quot;@drawable/ic_up&quot;</span>
+            <span class="s1">app:tint</span><span class="s2">=&quot;@color/black&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toTopOf</span><span class="s2">=&quot;@id/text_Lyrics&quot;</span>
+            <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;ImageButton</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/play_button&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;60dp&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;60dp&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;@drawable/play_button_background&quot;</span>
+            <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/app_name&quot;</span>
+            <span class="s1">android:padding</span><span class="s2">=&quot;12dp&quot;</span>
+            <span class="s1">android:src</span><span class="s2">=&quot;@drawable/ic_play&quot;</span>
+            <span class="s1">android:tint</span><span class="s2">=&quot;@color/colorwhite&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toTopOf</span><span class="s2">=&quot;@id/image_Lyrics&quot;</span>
+            <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;ImageButton</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/prev_button&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;45dp&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;45dp&quot;</span>
+            <span class="s1">android:layout_marginEnd</span><span class="s2">=&quot;15dp&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;@drawable/next_prev_button_background&quot;</span>
+            <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/app_name&quot;</span>
+            <span class="s1">android:padding</span><span class="s2">=&quot;4dp&quot;</span>
+            <span class="s1">android:src</span><span class="s2">=&quot;@drawable/ic_previous&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;@+id/play_button&quot;</span>
+            <span class="s1">app:layout_constraintEnd_toStartOf</span><span class="s2">=&quot;@id/play_button&quot;</span>
+            <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;@id/play_button&quot; </span><span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;ImageButton</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/next_button&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;45dp&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;45dp&quot;</span>
+            <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;15dp&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;@drawable/next_prev_button_background&quot;</span>
+            <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/app_name&quot;</span>
+            <span class="s1">android:padding</span><span class="s2">=&quot;4dp&quot;</span>
+            <span class="s1">android:src</span><span class="s2">=&quot;@drawable/ic_next&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;@id/play_button&quot;</span>
+            <span class="s1">app:layout_constraintStart_toEndOf</span><span class="s2">=&quot;@id/play_button&quot;</span>
+            <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;@id/play_button&quot;</span>
+            <span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;ImageButton</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/shuffle_button&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;30dp&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;20dp&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;@null&quot;</span>
+            <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/app_name&quot;</span>
+            <span class="s1">android:src</span><span class="s2">=&quot;@drawable/ic_shuffle&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;@id/play_button&quot;</span>
+            <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;@id/play_button&quot; </span><span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;ImageButton</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/repeat_button&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;30dp&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginEnd</span><span class="s2">=&quot;20dp&quot;</span>
+            <span class="s1">android:background</span><span class="s2">=&quot;@null&quot;</span>
+            <span class="s1">android:contentDescription</span><span class="s2">=&quot;@string/app_name&quot;</span>
+            <span class="s1">android:src</span><span class="s2">=&quot;@drawable/ic_repeat&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toBottomOf</span><span class="s2">=&quot;@id/play_button&quot;</span>
+            <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;@id/play_button&quot;</span><span class="s0">/&gt;</span>
+
+
+
+        <span class="s0">&lt;SeekBar</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/playerSeekerBar&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;match_parent&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginEnd</span><span class="s2">=&quot;20dp&quot;</span>
+            <span class="s1">android:layout_marginBottom</span><span class="s2">=&quot;25dp&quot;</span>
+            <span class="s1">android:progress</span><span class="s2">=&quot;45&quot;</span>
+            <span class="s1">android:theme</span><span class="s2">=&quot;@style/SeekBarTheme&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toTopOf</span><span class="s2">=&quot;@id/play_button&quot;</span>
+            <span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;TextView</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/text_currenttime&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_marginStart</span><span class="s2">=&quot;8dp&quot;</span>
+            <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginBottom</span><span class="s2">=&quot;4dp&quot;</span>
+            <span class="s1">android:text</span><span class="s2">=&quot;1:37&quot;</span>
+            <span class="s1">android:textColor</span><span class="s2">=&quot;@color/colorPrimaryText&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toTopOf</span><span class="s2">=&quot;@id/playerSeekerBar&quot;</span>
+            <span class="s1">app:layout_constraintStart_toStartOf</span><span class="s2">=&quot;@id/playerSeekerBar&quot;</span>
+            <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s1">app:layout_constraintVertical_bias</span><span class="s2">=&quot;0.965&quot; </span><span class="s0">/&gt;</span>
+
+        <span class="s0">&lt;TextView</span>
+            <span class="s1">android:id</span><span class="s2">=&quot;@+id/text_totaltime&quot;</span>
+            <span class="s1">android:layout_width</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_height</span><span class="s2">=&quot;wrap_content&quot;</span>
+            <span class="s1">android:layout_marginTop</span><span class="s2">=&quot;30dp&quot;</span>
+            <span class="s1">android:layout_marginEnd</span><span class="s2">=&quot;8dp&quot;</span>
+            <span class="s1">android:layout_marginBottom</span><span class="s2">=&quot;4dp&quot;</span>
+            <span class="s1">android:text</span><span class="s2">=&quot;4:12&quot;</span>
+            <span class="s1">android:textSize</span><span class="s2">=&quot;16sp&quot;</span>
+            <span class="s1">app:layout_constraintBottom_toTopOf</span><span class="s2">=&quot;@id/playerSeekerBar&quot;</span>
+            <span class="s1">app:layout_constraintEnd_toEndOf</span><span class="s2">=&quot;@id/playerSeekerBar&quot;</span>
+            <span class="s1">app:layout_constraintTop_toTopOf</span><span class="s2">=&quot;parent&quot;</span>
+            <span class="s1">app:layout_constraintVertical_bias</span><span class="s2">=&quot;0.962&quot;</span>
+            <span class="s1">android:textColor</span><span class="s2">=&quot;@color/colorPrimaryText&quot;</span><span class="s0">/&gt;</span>
+
+    <span class="s0">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+<span class="s0">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span></pre>
+</body>
+</html>
