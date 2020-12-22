@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">MusicPlayer</string>
-    <string name="lyrics">Lyrics</string>
-    <string name="current_song_title">Current Song Title</string>
-    <string name="artist_name">Artist Name</string>
-    <string name="now_playing">Now Playing</string>
-</resources>
